@@ -9,9 +9,6 @@ struct Mahasiswa {
     char jenisKelamin;
     string programStudi;
     double IPK;
-
-    Mahasiswa *prev;
-    Mahasiswa *next;
 };
 
 Mahasiswa* hashTable[hashTableSlot] = {NULL};
@@ -27,9 +24,6 @@ void tambahMahasiswa(int NIM, string nama, char jenisKelamin, string programStud
     mahasiswaBaru->jenisKelamin = jenisKelamin;
     mahasiswaBaru->programStudi = programStudi;
     mahasiswaBaru->IPK = IPK;
-    
-    mahasiswaBaru->prev = NULL;
-    mahasiswaBaru->next = NULL;
 
     int key = hashFunction(NIM);
 
